@@ -44,7 +44,7 @@ export const Route = createFileRoute("/assistant")({
       },
     ],
   }),
-  component: AssistantWorkspace;
+  component: AssistantWorkspace,
 });
 
 type TabId = "email" | "meeting" | "planner" | "research" | "helpdesk";
