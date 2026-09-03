@@ -134,11 +134,18 @@ function Header() {
               {l.label}
             </a>
           ))}
+          <Link
+            to="/assistant"
+            className="rounded-full px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-blush hover:text-primary"
+          >
+            AI Assistant
+          </Link>
           <Button asChild size="sm" className="ml-2 rounded-full">
             <a href="/Tshepiso-Langa-CV.pdf" download>
               <Download className="h-4 w-4" aria-hidden="true" /> CV
             </a>
           </Button>
+
         </nav>
 
         <button
