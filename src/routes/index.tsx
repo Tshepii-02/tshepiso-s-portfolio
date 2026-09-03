@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Heart,
@@ -134,11 +134,18 @@ function Header() {
               {l.label}
             </a>
           ))}
+          <Link
+            to="/assistant"
+            className="rounded-full px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-blush hover:text-primary"
+          >
+            AI Assistant
+          </Link>
           <Button asChild size="sm" className="ml-2 rounded-full">
             <a href="/Tshepiso-Langa-CV.pdf" download>
               <Download className="h-4 w-4" aria-hidden="true" /> CV
             </a>
           </Button>
+
         </nav>
 
         <button
@@ -166,6 +173,15 @@ function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/assistant"
+                onClick={() => setOpen(false)}
+                className="block rounded-xl px-3 py-2 text-sm font-semibold text-foreground hover:bg-blush hover:text-primary"
+              >
+                AI Assistant
+              </Link>
+            </li>
             <li className="pt-2">
               <Button asChild className="w-full rounded-full">
                 <a href="/Tshepiso-Langa-CV.pdf" download>
@@ -173,6 +189,7 @@ function Header() {
                 </a>
               </Button>
             </li>
+
           </ul>
         </nav>
       )}
